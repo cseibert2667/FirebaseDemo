@@ -39,15 +39,24 @@
     </style>
   </head>
   <body>
-    
+    <!-- Google Auth -->
     <button onclick="googleLogin()">
       Login with Google
     </button>
+
+    <!-- Firestore -->
     <h1 id="title"></h1>
     <input onchange="updatePost(event)">
 
+    <!-- Storage -->
+    <h1>Storage Upload</h1>
+    <input type="file" onchange="uploadeFile(this.files)">
+    <hr>
+    <img id="imgUpload" src="" width="100vw">
+
     <!-- <script src="googleAuth.js"></script> -->
     <!-- <script src="firestore.js"></script> -->
+    <!-- <script src="firestore2.js"></script> -->
     <script src="storage.js"></script>
 
   </body>
