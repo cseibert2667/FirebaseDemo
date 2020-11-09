@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <title>Firebase Demo</title>
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/8.0.1/firebase-app.js"></script>
@@ -40,17 +40,19 @@
   </head>
   <body>
     <!-- Google Auth -->
+    <h1>Google Authentication</h1>
     <button onclick="googleLogin()">
       Login with Google
     </button>
 
     <!-- Firestore -->
-    <h1 id="title"></h1>
+    <h1>Firestore</h1>
+    <h3 id="title"></h3>
     <input onchange="updatePost(event)">
 
     <!-- Storage -->
     <h1>Storage Upload</h1>
-    <input type="file" onchange="uploadeFile(this.files)">
+    <input type="file" onchange="uploadFile(this.files)">
     <hr>
     <img id="imgUpload" src="" width="100vw">
 
