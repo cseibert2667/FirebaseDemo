@@ -7,11 +7,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   const myPost = db.collection("posts").doc("firstpost");
 
-  // myPost.onSnapshot(doc => {
-  //     const data = doc.data();
-  //     document.write( data.title + `<br>`)
-  //     document.write( data.createdAt)
-  // })
+  myPost.onSnapshot(doc => {
+      const data = doc.data();
+      document.querySelector("#title").innerHTML = data.title;
+  })
 
 });
 
@@ -32,5 +31,5 @@ function googleLogin() {
 function updatePost(e) {
   const db = firebase.firestore();
   const myPost = db.collection("posts").doc("firstpost");
-  myPost.update({title: e.target.value})
+  myPost.update({title: e.target.value});
 }
