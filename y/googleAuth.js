@@ -7,7 +7,8 @@ function googleLogin() {
     .then((result) => {
       const user = result.user;
       document.write(`Hello ${user.displayName}`);
-      console.log(user);
+      // console.log(user);
+      console.log(result);
     })
     .catch(console.log)
 }
